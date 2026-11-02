@@ -1,0 +1,50 @@
+{
+  "name": "tide-lp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tide — autonomous Meteora DLMM / DAMM v2 liquidity terminal",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "seed:dev": "node --conditions=react-server --import tsx scripts/seed-dev.ts",
+    "reset:paper": "node --conditions=react-server --import tsx scripts/reset-paper.ts"
+  },
+  "dependencies": {
+    "@meteora-ag/cp-amm-sdk": "1.5.1",
+    "@meteora-ag/dlmm": "1.9.14",
+    "@solana/spl-token": "0.4.15",
+    "@solana/web3.js": "1.98.4",
+    "better-sqlite3": "13.0.3",
+    "bn.js": "5.2.2",
+    "bs58": "^6.0.0",
+    "geist": "1.8.2",
+    "lucide-react": "1.65.0",
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "recharts": "3.10.1",
+    "swr": "2.5.1",
+    "tweetnacl": "1.0.3",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "9.6.0",
+    "@types/bn.js": "5.2.0",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "playwright-core": "^1.64.1",
+    "server-only": "^0.0.1",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  },
+  "engines": {
+    "node": ">=22.12"
+  }
+}
